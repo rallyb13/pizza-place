@@ -8,6 +8,32 @@
     <script src="js/scripts.js"></script>
   </head>
   <body>
-    
+    <h1>The Pizza Party Pizza Place ...with pizza</h1>
+
+    <form id="pizzaForm">
+      <h3>Place Your Order</h3>
+
+      <label for="topping">Which type of pizza would you like?</label>
+      <select id="topping">
+        <option>Cheese</option>
+        <option>Pepperoni</option>
+      </select>
+
+      <label for="diameter">How large?</label>
+      <input type="text" id="diameter">
+
+      <button type="submit" class="btn btn-sm btn-danger">Pizzaaaahhhh!!!</button>
+    </form>
+
+    <hr>
+    <div id="orderInfo">
+      <p>Your pizza will have <span class="sliceNumber"></span> slices.</p>
+      <p>That will be $<span class="pizzaPrice"></span>. Thank you for pizza partying with us!</p>
+    </div>
   </body>
 </html>
+
+
+
+
+<!-- are you at our Vancouver, WA location? 6.5-->
