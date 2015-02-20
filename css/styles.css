@@ -1,0 +1,25 @@
+#balance {
+  display: none;
+  text-align: center;
+}
+
+#signUp {
+  /*border-width: 5px;*/
+}
+
+#transfer {
+ float: right;
+}
+
+body {
+  background: url("http://upload.wikimedia.org/wikipedia/commons/2/29/U.S_pennies.jpg");
+  background-size: cover;
+  /*color: #54b847;*/
+  color: #56bdd6;
+}
+
+.container {
+  background-color: black;
+  max-width: 1000px;
+  float: center;
+}
