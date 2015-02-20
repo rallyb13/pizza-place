@@ -9,26 +9,33 @@
   </head>
   <body>
     <h1>The Pizza Party Pizza Place ...with pizza</h1>
+    <div class="container">
+      <form id="pizzaForm">
+        <h3>Place Your Order</h3>
 
-    <form id="pizzaForm">
-      <h3>Place Your Order</h3>
+        <label for="topping">Which type of pizza would you like?</label>
+        <select id="topping">
+          <option>Cheese</option>
+          <option>Pepperoni</option>
+        </select>
 
-      <label for="topping">Which type of pizza would you like?</label>
-      <select id="topping">
-        <option>Cheese</option>
-        <option>Pepperoni</option>
-      </select>
+        <label for="diameter">How large?</label>
+        <input type="text" id="diameter">
 
-      <label for="diameter">How large?</label>
-      <input type="text" id="diameter">
+        <button type="submit" class="btn btn-sm btn-danger">Pizzaaaahhhh!!!</button>
+      </form>
 
-      <button type="submit" class="btn btn-sm btn-danger">Pizzaaaahhhh!!!</button>
-    </form>
-
-    <hr>
-    <div id="orderInfo">
-      <p>Your pizza will have <span class="sliceNumber"></span> slices.</p>
-      <p>That will be $<span class="pizzaPrice"></span>. Thank you for pizza partying with us!</p>
+      <hr>
+      <div id="orderInfo" class="response">
+        <p>Your pizza will have <span class="sliceNumber"></span> slices.</p>
+        <p>That will be $<span class="pizzaPrice"></span>. Thank you for pizza partying with us!</p>
+      </div>
+      <div id="ovenDisclaimer1" class="response">
+        <p>Sorry, but we only have a 48-inch oven.</p>
+      </div>
+      <div id="ovenDisclaimer2" class="response">
+        <p>Sorry, but while we DO use a real brick oven, it's still conventional in the sense of 3-dimensional space.</p>
+      </div>
     </div>
   </body>
 </html>

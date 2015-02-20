@@ -27,7 +27,7 @@ describe("Pizza", function() {
     it("will return the number of smaller slices for a denser pepperoni pizza", function() {
       var newPizza = Object.create(Pizza);
       newPizza.diameter = 20;
-      newPizza.topping = "pepperoni";
+      newPizza.topping = "Pepperoni";
       expect(newPizza.slices()).to.equal(14);
     });
   });
