@@ -64,6 +64,8 @@ $(document).ready(function() {
     nextPizza.diameter = inputtedDiameter;
     nextPizza.topping = inputtedTopping;
 
+    inputtedDiameter = $('input#diameter').val("");
+
     $(".response").hide();
     if (nextPizza.diameter > 48) {
       $("#ovenDisclaimer1").show();
@@ -71,11 +73,14 @@ $(document).ready(function() {
       $("#ovenDisclaimer2").show();
     } else {
       $(".sliceNumber").text(nextPizza.slices());
+      $(".pizzaPrice").text(nextPizza.cost());
       $("#orderInfo").show();
     }
-
-
-
+    $('.taxWA').click(function() {
+      var plusTax = (nextPizza.cost() * 1.065).toFixed(2);
+      $(".pizzaPrice").text(plusTax + " (with Washington sales tax)");
+      $('.taxWA').hide();
+    });
 
   });
 });
