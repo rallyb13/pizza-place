@@ -8,29 +8,36 @@
     <script src="js/scripts.js"></script>
   </head>
   <body>
-    <h1>The Pizza Party Pizza Place ...with pizza</h1>
+    <h1>The Pizza Party Pizza Place</h1>
+    <br>
     <div class="container">
       <form id="pizzaForm">
         <h3>Place Your Order</h3>
 
-        <label for="topping">Which type of pizza would you like?</label>
-        <select id="topping">
-          <option>Cheese</option>
-          <option>Pepperoni</option>
-        </select>
+        <div class="form-group">
+          <label for="topping">Which type of pizza would you like?</label>
+          <select id="topping">
+            <option>Cheese</option>
+            <option>Pepperoni</option>
+          </select>
+        </div>
 
-        <label for="diameter">How large?</label>
-        <input type="text" id="diameter">
+        <div class="form-group">
+          <label for="diameter">How large across? (in inches)</label>
+          <input type="text" id="diameter" class="form-control" required>
+        </div>
 
-        <button type="submit" class="btn btn-sm btn-danger">Pizzaaaahhhh!!!</button>
+        <button type="submit" class="btn btn-md btn-danger">Gimme Pizzaaaahhhh!!!</button>
       </form>
 
       <hr>
       <div id="orderInfo" class="response">
+        <img src="css/yum.gif" alt="Image of a pizza slice getting gobbled up. It could be yours">
         <p>Your pizza will have <span class="sliceNumber"></span> slices.</p>
-        <p>That will be $<span class="pizzaPrice"></span>.</p>
-        <p>Thank you for pizza partying with us!
-        <span class="btn btn-xs btn-info taxWA">At our Vancouver location?</span></p>
+        <p>That will be $<span class="pizzaPrice"></span>.
+          <span class="btn btn-xs btn-info taxWA">At our Vancouver location?</span></p>
+        <p>Thank you for pizza partying with us!</p>
+
       </div>
       <div id="ovenDisclaimer1" class="response">
         <p>Sorry, but we only have a 48-inch oven.</p>

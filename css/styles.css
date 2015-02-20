@@ -1,7 +1,37 @@
 h1{
   text-align: center;
+  background-image: url(mozzarella.jpg);
+  padding: 2em;
+  margin-top: 0;
+}
+
+h3{
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+body{
+  background-color: #DD9228;
+   /*#DB8C21 crust-inspired, but darker than above
+  #EEE9D8 doughier*/
+}
+
+form{
+  background-image: url(pepp.jpg);
+  padding: 1% 5% 5% 7.5%;
+  border-radius: 30%;
+  margin-right: 10%;
+}
+
+input{
+  max-width: 100px;
 }
 
 .response {
   display: none;
+}
+
+img{
+  float: right;
+  margin-right: 5%;
 }
