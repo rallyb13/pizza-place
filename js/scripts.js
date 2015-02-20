@@ -11,21 +11,38 @@ var Pizza = {
     var howMany = Math.round(this.diameter * factor)
     return howMany;
   },
+  size: function() {
+    var category;
+    if (this.diameter <= 8) {
+      category = "personal pan";
+    } else if (this.diameter <= 16) {
+      category = "medium";
+    } else if (this.diameter <= 24) {
+      category = "large";
+    } else {
+      category = "jumbo";
+    }
+    return category;
+  },
   cost: function() {
     var total;
     var area = .8 * this.diameter * this.diameter;
     var extra = 0;
-    if (this.topping === "Pepperoni") {
-      extra = 1
+    if (this.topping === "Pepperoni" && this.size() === "medium") {
+      extra = 1;
+    } else if (this.topping === "Pepperoni" && this.size() === "large") {
+      extra = 2;
+    } else if (this.topping === "Pepperoni" && this.size() === "jumbo") {
+      extra = 4; //which is really not bad, considering the size of this monster!
     }
 
     if (this.diameter <= 0) {
       total = 0
-    } else if (this.diameter <= 8) {
+    } else if (this.size() === "personal pan") {
       total = 5.99;
-    } else if (this.diameter <= 16) {
+    } else if (this.size() === "medium") {
       total = 5 + (area * .05);
-    } else if (this.diameter <= 24) {
+    } else if (this.size() === "large") {
       total = 7.5 + (area * .05);
     } else {
       total = 3 + (area * .045);

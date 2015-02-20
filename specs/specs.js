@@ -27,7 +27,26 @@ describe("Pizza", function() {
   });
 
   describe("size", function() {
-    
+    it("will recognize a personal pan pizza (8 inches or less)", function() {
+      var newPizza = Object.create(Pizza);
+      newPizza.diameter = 7;
+      expect(newPizza.size()).to.equal("personal pan");
+    });
+    it("will recognize a medium pizza (up to 16 inches)", function() {
+      var newPizza = Object.create(Pizza);
+      newPizza.diameter = 13;
+      expect(newPizza.size()).to.equal("medium");
+    });
+    it("will recognize a large pizza (up to 24 inches)", function() {
+      var newPizza = Object.create(Pizza);
+      newPizza.diameter = 21;
+      expect(newPizza.size()).to.equal("large");
+    });
+    it("will recognize (our best deal) a jumbo pizza (up to 48 inches!)", function() {
+      var newPizza = Object.create(Pizza);
+      newPizza.diameter = 40;
+      expect(newPizza.size()).to.equal("jumbo");
+    });
   });
 
   describe("cost", function() {
@@ -36,23 +55,23 @@ describe("Pizza", function() {
       newPizza.diameter = 0;
       expect(newPizza.cost()).to.equal(0.00);
     });
-    it("will return the price of our personal pan special for any pizza 8 inches or less", function() {
+    it("will return the price of our personal pan special (any toppings!)", function() {
       var newPizza = Object.create(Pizza);
       newPizza.diameter = 6;
       expect(newPizza.cost()).to.equal(5.99);
     });
-    it("will return the price of a medium pizza (up to 16 inches)", function() {
+    it("will return the price of a medium pizza", function() {
       var newPizza = Object.create(Pizza);
       newPizza.diameter = 12;
       expect(newPizza.cost()).to.equal(10.76);
     })
-    it("will return the price of a large pizza (up to 24 inches)", function() {
+    it("will return the price of a large pizza", function() {
       var newPizza = Object.create(Pizza);
       newPizza.diameter = 18;
       expect(newPizza.cost()).to.equal(20.46);
     });
 
-    it("will return the price of our speciality, the jumbo pizza (up to 48 inches)", function() {
+    it("will return the price of our speciality, the jumbo pizza", function() {
       var newPizza = Object.create(Pizza);
       newPizza.diameter = 30;
       expect(newPizza.cost()).to.equal(35.40);
@@ -64,5 +83,20 @@ describe("Pizza", function() {
       newPizza.topping = "Pepperoni";
       expect(newPizza.cost()).to.equal(10.41);
     });
+
+    it("will return the price of a large pepperoni pie", function() {
+      var newPizza = Object.create(Pizza);
+      newPizza.diameter = 18;
+      newPizza.topping = "Pepperoni";
+      expect(newPizza.cost()).to.equal(22.46);
+    });
+
+    it("will return the price of a jumbo pepperoni pie", function() {
+      var newPizza = Object.create(Pizza);
+      newPizza.diameter = 30;
+      newPizza.topping = "Pepperoni";
+      expect(newPizza.cost()).to.equal(39.40);
+    });
+
   });
 });
