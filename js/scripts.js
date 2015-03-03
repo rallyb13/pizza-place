@@ -68,6 +68,7 @@ $(document).ready(function() {
 
     $(".taxWA").show();
     $(".response").hide();
+    $(".response").css("color", "black");
     if (nextPizza.diameter > 48) {
       $("#ovenDisclaimer1").show();
     } else if (nextPizza.diameter < 0) {

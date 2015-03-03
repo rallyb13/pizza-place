@@ -17,7 +17,7 @@ so that there are no surprises about the cost upon pickup/delivery.
 ```
 
 #Bug Report
-No known bugs currently. Please let me know if you find any.
+You can enter non-numbers as an input, get NaN.
 
 ```
 Benjamin D. Herson
