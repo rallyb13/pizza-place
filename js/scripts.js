@@ -73,9 +73,12 @@ $(document).ready(function() {
       $("#ovenDisclaimer1").show();
     } else if (nextPizza.diameter < 0) {
       $("#ovenDisclaimer2").show();
+    } else if (isNaN(nextPizza.diameter)){
+      $("#numberPlease").show();
     } else {
       $(".sliceNumber").text(nextPizza.slices());
       $(".pizzaPrice").text(nextPizza.cost());
+      $(".pizzaSize").text(nextPizza.size());
       $("#orderInfo").show();
       if (nextPizza.topping === "Pepperoni") {
         $(".response").css("color", "red");
